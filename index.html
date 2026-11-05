@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>崔天一 · 算法工程师 | 卫星遥感图像处理与星上边缘计算</title>
+<meta name="description" content="崔天一，南京航空航天大学光学工程硕士，算法工程师。从事光学与 SAR 卫星遥感影像的多源融合解译与算力受限平台部署。">
+<meta name="author" content="崔天一">
+<meta property="og:title" content="崔天一 · 算法工程师">
+<meta property="og:description" content="卫星遥感图像处理 · 光学与 SAR 多源融合 · 星上边缘部署">
+<meta property="og:type" content="profile">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/avatar-32.png">
+<link rel="apple-touch-icon" href="assets/img/avatar-180.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .nav__variant {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid rgba(27, 75, 143, 0.25);
+    background: rgba(27, 75, 143, 0.06);
+    color: #1b4b8f;
+    font: inherit;
+    font-size: 0.86em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.32em 1.6em 0.32em 0.7em;
+    border-radius: 999px;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, transparent 50%, #1b4b8f 50%),
+                      linear-gradient(135deg, #1b4b8f 50%, transparent 50%);
+    background-position: calc(100% - 0.95em) 55%, calc(100% - 0.62em) 55%;
+    background-size: 0.34em 0.34em, 0.34em 0.34em;
+    background-repeat: no-repeat;
+  }
+  .nav__variant:focus-visible { outline: 2px solid #1b4b8f; outline-offset: 2px; }
+  .nav__linkwrap { display: flex; align-items: center; }
+</style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="index.html">崔天一</a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="展开菜单" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about">关于</a></li>
+      <li><a href="#experience">经历</a></li>
+      <li><a href="#projects">项目</a></li>
+      <li><a href="#education">教育</a></li>
+      <li><a href="#skills">技能</a></li>
+      <li><a href="#opensource">开源</a></li>
+      <li><a href="#honors">荣誉</a></li>
+      <li><a href="#contact">联系</a></li>
+      <li class="nav__linkwrap">
+        <label class="visually-hidden" for="variantSelect" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">切换投递方向</label>
+        <select class="nav__variant" id="variantSelect" aria-label="切换投递方向">
+          <option value="space">卫星遥感 · 太空计算</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<script src="assets/data/variants.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

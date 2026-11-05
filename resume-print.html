@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>崔天一 · 简历</title>
+<style>
+  @page { size: A4; margin: 9.5mm 13mm 6mm; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    color: #1a1d23;
+    font-family: "Source Han Sans SC", "Noto Sans SC", "PingFang SC",
+      "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
+    font-size: 8.7pt;
+    line-height: 1.31;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- header ---------- */
+  header { border-bottom: 2px solid #1b4b8f; padding-bottom: 7pt; margin-bottom: 2pt; }
+
+  .hdr { display: flex; justify-content: space-between; align-items: flex-start; gap: 10pt; }
+  .hdr__text { flex: 1; min-width: 0; }
+  .hdr__side { display: flex; align-items: flex-start; gap: 7pt; flex: none; }
+  .hdr__qr { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 2.5pt; }
+  .hdr__qr img { width: 14.5mm; height: 14.5mm; display: block; }
+  .hdr__qr figcaption { font-size: 5.8pt; color: #6b7280; letter-spacing: 0.02em; white-space: nowrap; }
+  .hdr__photo {
+    width: 17mm;
+    height: 23mm;
+    object-fit: cover;
+    object-position: 50% 16%;
+    border-radius: 2pt;
+    border: 1px solid #e2e6ee;
+    flex: none;
+    margin-top: 1pt;
+  }
+
+  h1 {
+    margin: 0 0 2pt;
+    font-size: 19pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+  }
+
+  .tagline {
+    margin: 0 0 4pt;
+    font-size: 9.6pt;
+    font-weight: 600;
+    color: #1b4b8f;
+    letter-spacing: 0.02em;
+  }
+
+  .contact { margin: 0; font-size: 9pt; color: #555c68; }
+  .contact span + span::before { content: "|"; margin: 0 6pt; color: #c3c9d4; }
+
+  /* ---------- sections ---------- */
+  h2 {
+    margin: 3.4pt 0 1.8pt;
+    padding-bottom: 2pt;
+    font-size: 10.6pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #1b4b8f;
+    border-bottom: 1px solid #dfe3ea;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  h2:first-of-type { margin-top: 8pt; }
+
+  .item { margin-bottom: 1.5pt; break-inside: avoid; page-break-inside: avoid; }
+  .item:last-child { margin-bottom: 0; }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10pt;
+  }
+  .row .org { font-weight: 700; font-size: 10.2pt; letter-spacing: 0.01em; }
+  .row .role { color: #3f4753; font-size: 9.7pt; }
+  .row .role::before { content: "｜"; color: #c3c9d4; margin: 0 1pt; }
+  .row .date {
+    flex: none;
+    font-size: 8.9pt;
+    color: #6b7280;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .meta { margin: 1pt 0 0; font-size: 9.3pt; color: #4b525e; }
+
+  ul { margin: 1.5pt 0 0; padding-left: 11pt; }
+  li { margin: 0 0 0.1pt; }
+  li::marker { color: #b6bcc7; }
+
+  .skills li { margin-bottom: 1pt; }
+
+  .sub { margin-top: 3pt; padding-top: 3pt; border-top: 1px dashed #e2e6ee; }
+  .sub .subrole { font-weight: 600; font-size: 9.6pt; color: #3f4753; }
+  .skills b { color: #1a1d23; }
+
+  strong { font-weight: 700; }
+
+  .kw { color: #1b4b8f; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr">
+    <div class="hdr__text">
+      <h1>崔天一</h1>
+      <p class="tagline">算法工程师 · 卫星遥感图像处理与星上边缘部署</p>
+      <p class="contact">
+        <span>男 · 25 岁</span><span>上海</span><span>18837831302</span><span>503575179@qq.com</span>
+      </p>
+    </div>
+    <div class="hdr__side">
+      <figure class="hdr__qr">
+        <img src="assets/img/qr-site.png" alt="扫码查看在线简历">
+        <figcaption>在线简历</figcaption>
+      </figure>
+      <img class="hdr__photo" src="assets/img/avatar.jpg" alt="崔天一">
+    </div>
+  </div>
+</header>
+
+<h2>教育背景</h2>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">南京航空航天大学</span><span class="role">光学工程 · 硕士（航天学院）</span></div>
+    <span class="date">2023.09 – 2026.04</span>
+  </div>
+  <p class="meta">研究方向：多模态数据融合与边缘计算。获授权专利 2 项、受理专利 6 项；SCI 二区论文 1 篇（IEEE）、EI 检索论文 2 篇；连续三年获一等奖学金。</p>
+</div>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">长春理工大学</span><span class="role">光电信息科学与工程 · 学士（双一流学科）</span></div>
+    <span class="date">2019.09 – 2023.06</span>
+  </div>
+  <p class="meta">研究方向：激光仿真。发表 SPIE 会议论文 1 篇。</p>
+</div>
+
+<h2>核心技能</h2>
+<ul class="skills">
+  <li><b>遥感与融合：</b>光学 / SAR 影像预处理、L1 级辐射定标与几何校正、L2 级正射与大气校正、多光谱融合与影像镶嵌、光学—SAR 亚像元配准、云检测与云影剔除、多时相合成、多源融合语义分割、物候特征与时序分析</li>
+  <li><b>数据与平台：</b>天府星座 / 环天星座影像、Sentinel-1 / Sentinel-2、L0—L2 产品分级与质检、Google Earth Engine、SRTM DEM 与辅助数据、样本自动生成与影像制图精度评价</li>
+  <li><b>模型与框架：</b>CNN、Transformer、语义分割（UPerNet 解码）、多模态融合网络、GAN 与风格迁移、YOLO 系列、随机森林与集成学习、PyTorch、TensorFlow</li>
+  <li><b>边缘部署与工程：</b>昇腾 310B（Atlas DK2）、Jetson 边缘部署、模型轻量化与推理加速、Python、C++、国产算力平台算法迁移、STM32 与 ESP32 嵌入式联调</li>
+  <li><b>工程化：</b>影像产品分级与质检、数据闭环与自动化测评、工具包与流水线设计</li>
+  <li><b>科研与文档：</b>SCI 与 EI 论文写作、专利撰写、软件需求规格说明书与库接口定义、英文书面与口头沟通</li>
+</ul>
+
+<h2>工作与实习经历</h2>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">上海航天技术研究院（航天八院）</span><span class="role">算法工程师</span></div>
+    <span class="date">2026.03 – 至今</span>
+  </div>
+  <ul>
+    <li>主导多源融合算法重构，将点云、红外与可见光数据纳入统一处理框架，替代原有串联式链路；方案<strong>通过科工局评审</strong>，单项目为客户节约成本逾 <strong>100 万元</strong>，取得正式应用证明。</li>
+    <li>参与申报论证、方案评审、模型训练到国产硬件平台迁移的完整流程；负责融合链路的效果验证与工程化交付。</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">图灵人工智能研究院</span><span class="role">算法工程师（实习）</span></div>
+    <span class="date">2025.03 – 2025.08</span>
+  </div>
+  <ul>
+    <li>负责工业检测系统的风格迁移与缺陷检测算法开发，通过扩充数据分布提升模型跨域泛化能力，实现端到端推理；设计 OCR 与大模型融合方案，提升低质图像与复杂背景下的字符识别准确率。</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">环天智慧科技股份有限公司（天府星座）</span><span class="role">算法工程师（实习）</span></div>
+    <span class="date">2024.06 – 2025.02</span>
+  </div>
+  <ul>
+    <li>承担<strong>天府星座</strong>光学与 SAR 卫星影像的 <strong>L1 / L2 级产品处理</strong>：辐射定标、传感器几何校正、正射与大气校正、多光谱融合与镶嵌，输出空间基准统一的标准影像底图。</li>
+    <li>以点线特征协同与控制点优化实现光学—SAR 跨模态<strong>亚像元配准</strong>，维护多时相、跨传感器影像的几何一致性；在四川丘陵破碎田块场景实现地块级语义分割与作物种植面积提取。</li>
+    <li>面向<strong>农业保险与地质灾害险理赔</strong>建立遥感量化评估链路，输出地块边界、受损范围与面积统计，形成可复核的定损依据；相关技术产出发明专利 2 项。</li>
+  </ul>
+</div>
+
+<h2>项目经历</h2>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">天府星座保险理赔量化评估</span><span class="role">环天智慧 · 已上线</span></div>
+    <span class="date">2024.06 – 2025.02</span>
+  </div>
+  <ul>
+    <li>面向政策性农业保险与地质灾害险的遥感定损：以天府星座光学与 SAR 影像为数据源，完成 L1 / L2 级产品生产与跨模态亚像元配准，形成空间基准统一的地块底图。</li>
+    <li>通过灾前灾后影像差异分析提取受损地块图斑并统计面积，输出与保单地块可对应、可复核的定损依据；解决多云雨地区光学影像缺失导致定损周期长、人工核查成本高的问题。</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">图灵鉴 X</span><span class="role">工业缺陷检测与 OCR 识别 · 已上线（tulegit.com/chat）</span></div>
+    <span class="date">2025.03 – 2025.08</span>
+  </div>
+  <ul>
+    <li>面向工业质检的落地产品。在目标域样本稀缺条件下以风格迁移扩充数据分布，提升缺陷检测模型的泛化能力并实现端到端推理；设计 OCR 与大模型融合方案，改善复杂背景与低质图像下的字符识别效果。</li>
+  </ul>
+</div>
+
+<h2>开源作品</h2>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">RGB / SAR / LiDAR 多模态遥感仿真数据集生成器</span><span class="role">github.com/ccccty/RGB_SAR_LIDAR_SIMU</span></div>
+  </div>
+  <ul>
+    <li>面向遥感解译训练数据稀缺的多模态观测仿真器：给定三维模型与观测几何，离线生成可见光、红外（MWIR / LWIR）、SAR 条带式（距离多普勒聚焦、相干斑与 NESZ）、毫米波雷达距离—多普勒与激光雷达点云；各模态共享同一三维世界与天气状态，标注由三维包围盒统一投影导出，天然像素级跨模态配准，可直接导出 YOLO 与 COCO 数据集。</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="row">
+    <div><span class="org">proposal-generator-cn</span><span class="role">辅助科研申报书写作的技能包 · github.com/ccccty/proposal-generator-cn</span></div>
+  </div>
+  <ul>
+    <li>辅助科研申报书写作的技能包，适用于国家级科研计划与各类科研项目：正文采用无元信息的学术文体，技术指标附带基线论证，未确定事项剥离至随附清单；随包提供文体合规自检、Markdown 转 Word 与 Word 结构校验三项可执行工具。</li>
+  </ul>
+</div>
+
+<h2>荣誉与科研成果</h2>
+<ul>
+  <li><strong>2026 年上海市质量协会质量技术奖（成果）三等奖</strong>（CIHF 2026 中国工业论坛质量创新论坛）</li>
+  <li>授权专利 2 项、受理专利 6 项；SCI 二区论文 1 篇（IEEE）、EI 检索论文 2 篇、SPIE 会议论文 1 篇</li>
+</ul>
+
+</body>
+</html>
