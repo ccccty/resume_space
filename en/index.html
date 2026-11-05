@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cui Tianyi · Algorithm Engineer | Satellite Remote Sensing Image Processing and On-Board Edge Computing</title>
-<meta name="description" content="Cui Tianyi, M.S. in Optical Engineering (NUAA). Algorithm engineer working on optical–SAR satellite image fusion and deployment on compute-constrained platforms: phenology-constrained adaptive sample generation and a multi-scale asymmetric fusion network, rice IoU 83.31%, five-year 10 m mapping.">
+<meta name="description" content="Cui Tianyi, M.S. in Optical Engineering (NUAA), algorithm engineer. Builds quantitative assessments from optical and SAR satellite imagery for agricultural commodities: parcel-level crop identification, planted area and growth estimation, damage quantification, expressed as auditable metrics supporting yield estimation, supply assessment and risk quantification. Currently at the 8th Academy of CASC; led a multi-source fusion refactor saving over ¥1M on a single project.">
 <meta name="author" content="Cui Tianyi">
 <meta property="og:title" content="Cui Tianyi · Algorithm Engineer">
 <meta property="og:description" content="Satellite image processing · Optical–SAR fusion · On-board edge deployment">
@@ -47,10 +47,10 @@
   <section class="hero">
     <div class="wrap hero__inner">
       <div>
-        <p class="hero__eyebrow">Algorithm Engineer · Satellite Image Processing · Space Computing and On-Board Edge Deployment</p>
+        <p class="hero__eyebrow">Algorithm Engineer · Quantitative Remote Sensing · Commodity Assessment · On-Board Edge Deployment</p>
         <h1 class="hero__name">Cui Tianyi<small>崔天一</small></h1>
         <p class="hero__role">
-          M.S. in Optical Engineering, working on fusion of optical and SAR satellite imagery and on real-time inference over compute-constrained platforms. Built a phenology-constrained sample generator and a multi-scale asymmetric fusion network for fragmented hilly rice regions, reaching a rice IoU of <strong>83.31%</strong>. Currently an algorithm engineer at the Shanghai Academy of Spaceflight Technology, where I lead a multi-source fusion refactor that passed review by SASTIND and saved the client <strong>over ¥1 million</strong> on a single project.
+          M.S. in Optical Engineering. I build quantitative assessments from optical and SAR satellite imagery for agricultural commodities: turning on-orbit observations — through cloud, shadow and fragmented parcels — into parcel-level indicators of crop type, planted area, growth stage and damage, expressed as auditable metrics that support yield estimation, supply assessment and risk quantification. I am currently an algorithm engineer at the Shanghai Academy of Spaceflight Technology, leading a multi-source fusion refactor that passed review by SASTIND and saved the client <strong>over ¥1 million</strong> on a single project.
         </p>
 
         <ul class="hero__meta">
@@ -99,16 +99,13 @@
             My research focuses on fusion of optical and SAR satellite imagery and on real-time inference over compute-constrained platforms in space computing scenarios. The regime differs from ground vision: acquisition is uncontrolled, with cloud, terrain shadow and speckle acting at once; labelled samples are scarce and extrapolate poorly; and on-board or in-orbit platforms are bounded in power, compute and downlink bandwidth. My approach is to split the interpretation chain into independently verifiable stages — modality harmonisation and registration, sample generation, fusion network, deployment optimisation — each closed by a measurable accuracy criterion.
           </p>
           <p>
-            My M.S. thesis takes Tianfu New Area, Meishan, Sichuan as the study region and uses Sentinel-1 SAR with Sentinel-2 optical data to propose a phenology-constrained adaptive rice sample generator and a multi-scale asymmetric fusion network (MSAFNet). It delivers five-year (2019–2023) rice maps at 10 m resolution with a rice IoU of 83.31% and an overall accuracy of 99.24%, and a linear fit of R² = 0.972 against official acreage statistics. The work is published in the International Journal of Digital Earth (SCI Q2, IF 5.1) and has produced two patent applications.
-          </p>
-          <p>
             At Huantian Wisdom — the operator of the Tianfu (Huantian) constellation of joint optical and SAR remote sensing satellites — I worked on L1/L2 image product processing and multi-source fusion analysis, delivering farmland semantic segmentation, parcel-level crop extraction and quantitative assessment for geological and agricultural insurance claims. At SAST I now lead a multi-source fusion refactor bringing point cloud, infrared and visible-light data into a unified framework, and I am familiar with the full path from model training and migration onto domestic compute platforms through to post-launch quality maintenance.
           </p>
         </div>
 
         <aside class="facts reveal">
           <dl>
-            <div class="facts__row"><dt>Research focus</dt><dd>Remote sensing fusion</dd></div>
+            <div class="facts__row"><dt>Research focus</dt><dd>Quantitative remote sensing</dd></div>
             <div class="facts__row"><dt>Current role</dt><dd>Algorithm Engineer, 8th Academy of CASC</dd></div>
             <div class="facts__row"><dt>Education</dt><dd>M.S. · Class of 2026</dd></div>
             <div class="facts__row"><dt>Based in</dt><dd>Shanghai, China</dd></div>
@@ -154,7 +151,7 @@
 
           <div class="tl-sub">
             <div class="tl-sub__head">
-              <span class="tl-sub__role">Lightweight Inference on Edge Platforms (Intern)</span>
+              <span class="tl-sub__role">Internship at SAST</span>
               <span class="tl-date">Sep 2023 – Dec 2023</span>
             </div>
             <div class="tl-body">
@@ -214,36 +211,15 @@
       </div>
 
       <div class="projects">
-        <article class="card card--wide reveal">
-          <div class="card__top">
-            <span class="tag">M.S. Thesis · Optical–SAR Fusion</span>
-            <span class="card__date">Sep 2023 – Mar 2026</span>
-          </div>
-          <h3 class="card__title">Fine-Scale Rice Mapping by Optical–SAR Fusion</h3>
-          <p class="card__desc">
-            A “sample generation, fusion recognition” pipeline for Tianfu New Area, Meishan, Sichuan, built on Sentinel-1 SAR and Sentinel-2 optical data. On the sample side, LSWI, CCVS and SDWI phenological indices coarsely locate candidate paddies during transplanting, then multi-temporal random-forest soft voting with limited manual verification yields cross-year, spatially balanced training samples at a stable OA of 91.0–93.7%. On the recognition side, the multi-scale asymmetric fusion network MSAFNet pairs a dual-branch non-shared encoder with a multi-scale semantic enhancement module (MSEM) and a class-balanced feature fusion module (CBFM), decoded by UPerNet to recover fine boundaries, reaching a rice IoU of 83.31% and OA of 99.24% — 5–10 points above mainstream multimodal baselines — and producing 2019–2023 maps at 10 m resolution with R² = 0.972 against official acreage.
-          </p>
-          <div class="card__stack">
-            <span class="chip">Sentinel-1 / 2</span>
-            <span class="chip">Google Earth Engine</span>
-            <span class="chip">Multimodal fusion</span>
-            <span class="chip">Semantic segmentation</span>
-            <span class="chip">Phenology</span>
-            <span class="chip">Random forest</span>
-            <span class="chip">UPerNet</span>
-          </div>
-          <div class="card__links">
-            <a href="#honors">Publications and patents</a>
-            <a href="#contact">Get in touch</a>
-          </div>
-        </article>
 
         <article class="card reveal">
           <div class="card__top">
             <span class="tag">Satellite Application · Live</span>
             <span class="card__date">Jun 2024 – Feb 2025</span>
           </div>
-          <h3 class="card__title">Xingkan Heshan: Farmland Interpretation and Claim Quantification</h3>
+          <h3 class="card__title">
+            <a href="https://www.htwisdom.cn/productionAndService/wxygdsj/" target="_blank" rel="noopener">Xingkan Heshan: Farmland Interpretation and Claim Quantification</a>
+          </h3>
           <p class="card__desc">
             A remote sensing application for provincial high-standard farmland supervision and insurance loss assessment. On the data side, L1/L2 products are generated from Tianfu constellation optical and SAR imagery — radiometric calibration and system geometric correction, orthorectification and atmospheric correction, multi-spectral pan-sharpening and mosaicking — with sub-pixel cross-modal registration driven by point-and-line features and control points, yielding a base layer on a unified spatial reference. On the application side, joint optical and SAR observation replaces single-source data, covering optical gaps in cloudy regions and parcel boundaries obscured by cloud. Parcels are vectorised into a common map on which crop type, planted area and growth grade are reported; for damage events, pre- and post-event imagery are compared to quantify the affected extent and area as auditable claim evidence.
           </p>
@@ -255,6 +231,7 @@
             <span class="chip">Accuracy assessment</span>
           </div>
           <div class="card__links">
+            <a href="https://www.htwisdom.cn/productionAndService/wxygdsj/" target="_blank" rel="noopener">Product page</a>
             <a href="#experience">Context</a>
           </div>
         </article>
