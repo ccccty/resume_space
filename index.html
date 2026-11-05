@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>崔天一 · 算法工程师 | 卫星遥感图像处理与星上边缘计算</title>
-<meta name="description" content="崔天一，南京航空航天大学光学工程硕士，算法工程师。从事光学与 SAR 卫星遥感影像的多源融合解译与算力受限平台部署。">
+<meta name="description" content="崔天一，南京航空航天大学光学工程硕士，算法工程师。从事光学与 SAR 卫星遥感影像的多源融合解译与算力受限平台部署：物候约束的样本自适应生成与多尺度非对称融合网络，水稻地块 IoU 83.31%，10 m 分辨率五年制图；现任航天八院算法工程师，主导多源融合算法重构，单项目节省成本 100 余万元。">
 <meta name="author" content="崔天一">
 <meta property="og:title" content="崔天一 · 算法工程师">
 <meta property="og:description" content="卫星遥感图像处理 · 光学与 SAR 多源融合 · 星上边缘部署">
@@ -12,35 +12,13 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/avatar-32.png">
 <link rel="apple-touch-icon" href="assets/img/avatar-180.png">
 <link rel="stylesheet" href="assets/css/style.css">
-<style>
-  .nav__variant {
-    appearance: none;
-    -webkit-appearance: none;
-    border: 1px solid rgba(27, 75, 143, 0.25);
-    background: rgba(27, 75, 143, 0.06);
-    color: #1b4b8f;
-    font: inherit;
-    font-size: 0.86em;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    padding: 0.32em 1.6em 0.32em 0.7em;
-    border-radius: 999px;
-    cursor: pointer;
-    background-image: linear-gradient(45deg, transparent 50%, #1b4b8f 50%),
-                      linear-gradient(135deg, #1b4b8f 50%, transparent 50%);
-    background-position: calc(100% - 0.95em) 55%, calc(100% - 0.62em) 55%;
-    background-size: 0.34em 0.34em, 0.34em 0.34em;
-    background-repeat: no-repeat;
-  }
-  .nav__variant:focus-visible { outline: 2px solid #1b4b8f; outline-offset: 2px; }
-  .nav__linkwrap { display: flex; align-items: center; }
-</style>
 <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 
 <div class="progress" id="progress"></div>
 
+<!-- ======================= 导航 ======================= -->
 <header class="nav" id="nav">
   <div class="wrap nav__inner">
     <a class="nav__brand" href="index.html">崔天一</a>
@@ -60,21 +38,532 @@
       <li><a href="#opensource">开源</a></li>
       <li><a href="#honors">荣誉</a></li>
       <li><a href="#contact">联系</a></li>
-      <li class="nav__linkwrap">
-        <label class="visually-hidden" for="variantSelect" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">切换投递方向</label>
-        <select class="nav__variant" id="variantSelect" aria-label="切换投递方向">
-          <option value="space">卫星遥感 · 太空计算</option>
-          <option value="embodied">具身智能 · 多模态感知</option>
-        </select>
-      </li>
+      <li><a class="nav__lang" href="en/index.html" hreflang="en">EN</a></li>
     </ul>
   </div>
 </header>
 
-<main id="app"></main>
+<main>
 
-<script src="assets/data/variants.js"></script>
-<script src="assets/js/app.js"></script>
+  <!-- ======================= Hero ======================= -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div>
+        <p class="hero__eyebrow">算法工程师 · 卫星遥感图像处理 · 太空计算与星上边缘部署</p>
+        <h1 class="hero__name">崔天一<small>Cui Tianyi</small></h1>
+        <p class="hero__role">
+          光学工程硕士，从事光学与 SAR 卫星遥感影像的多源融合解译，以及算力受限平台上的实时推理。以四川丘陵稻区为场景构建物候约束的样本生成与多尺度非对称融合网络，水稻地块 IoU 达 <strong>83.31%</strong>。现任上海航天技术研究院算法工程师，主导多源融合算法重构，方案通过科工局评审，单项目为客户节约成本逾 <strong>100 万元</strong>。
+        </p>
+
+        <ul class="hero__meta">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.2-7-11a7 7 0 1 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            上海
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 10.5V20h14v-9.5"/><path d="M9.5 20v-5h5v5"/></svg>
+            南京航空航天大学 · 硕士
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/></svg>
+            25 岁 · 男
+          </li>
+        </ul>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M4.5 19.5h15"/></svg>
+            下载 PDF 简历
+          </a>
+          <a class="btn btn--ghost" href="mailto:503575179@qq.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.6 6.6 8.4 6 8.4-6"/></svg>
+            503575179@qq.com
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__avatar">
+        <img src="assets/img/avatar.jpg" alt="崔天一" width="520" height="689">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 关于 ======================= -->
+  <section class="section section--alt" id="about">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">About</span>
+        <h2 class="section__title">关于我</h2>
+      </div>
+
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            研究方向为光学与 SAR 卫星遥感影像的多源融合解译，以及太空计算场景下算力受限平台的实时推理。卫星遥感的问题条件与地面视觉不同：成像不受控，云雨、地形阴影与相干斑同时存在；标注样本稀缺且难以外推；而星上或在轨平台的功耗、算力与下行带宽都极为有限。应对方式是把解译流程拆成可独立验证的环节——模态一致化与配准、样本生成、融合网络、部署优化——每一环都用可量化的精度指标闭环。
+          </p>
+          <p>
+            硕士学位论文以四川眉山天府新区为研究区，基于 Sentinel-1 SAR 与 Sentinel-2 光学数据，提出物候约束的水稻样本自适应生成策略与多尺度非对称融合网络（MSAFNet），完成 2019—2023 年 10 m 分辨率水稻分布制图：水稻类 IoU 83.31%、总体精度 99.24%，与统计面积线性拟合 R² 达 0.972。成果发表于 International Journal of Digital Earth（SCI 二区，IF 5.1），并申请发明专利 2 项。
+          </p>
+          <p>
+            在环天智慧（天府星座 /“环天星座”光学与 SAR 双模遥感卫星运营方）负责 L1、L2 级影像产品处理与多源融合分析，落地农田语义分割、地块级作物提取与地质、农业保险理赔的量化评估。现在航天八院主导点云、红外与可见光的多源融合算法重构，熟悉从模型训练、国产算力平台迁移到上线后质量维护的完整链路。
+          </p>
+        </div>
+
+        <aside class="facts reveal">
+          <dl>
+            <div class="facts__row"><dt>研究方向</dt><dd>遥感多源融合解译</dd></div>
+            <div class="facts__row"><dt>现任</dt><dd>航天八院 · 算法工程师</dd></div>
+            <div class="facts__row"><dt>学历</dt><dd>硕士 · 2026 届</dd></div>
+            <div class="facts__row"><dt>常驻城市</dt><dd>上海</dd></div>
+            <div class="facts__row"><dt>科研成果</dt><dd>论文 4 篇 · 专利 8 项</dd></div>
+            <div class="facts__row"><dt>语言</dt><dd>中文 / 英文</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><span class="stat__num">83.31%</span><span class="stat__label">水稻地块分割 IoU</span></div>
+        <div class="stat"><span class="stat__num">10 m</span><span class="stat__label">五年水稻制图分辨率</span></div>
+        <div class="stat"><span class="stat__num">100 万+</span><span class="stat__label">单项目节省成本</span></div>
+        <div class="stat"><span class="stat__num">8 项</span><span class="stat__label">专利（2 授权 / 6 受理）</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 经历 ======================= -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Experience</span>
+        <h2 class="section__title">工作与实习经历</h2>
+        <p class="section__desc">从卫星遥感影像的融合解译，到多源探测数据的统一处理与工程交付。</p>
+      </div>
+
+      <ol class="timeline reveal">
+        <li class="tl-item tl-item--now">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">算法工程师<span class="badge-now">在职</span></h3>
+              <div class="tl-org">上海航天技术研究院（航天八院）</div>
+            </div>
+            <span class="tl-date">2026.03 – 至今</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>主导多源融合算法重构，将点云、红外与可见光数据纳入统一处理框架，替代原有串联式链路</li>
+              <li>方案通过科工局评审，单项目为客户节约成本逾 100 万元，取得正式应用证明</li>
+              <li>负责算法向国产算力平台的迁移与实时性优化，承担融合链路的效果验证与工程化交付</li>
+            </ul>
+          </div>
+
+          <div class="tl-sub">
+            <div class="tl-sub__head">
+              <span class="tl-sub__role">边缘平台轻量化推理（实习）</span>
+              <span class="tl-date">2023.09 – 2023.12</span>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>基于 Transformer 与 LSTM 设计目标跟踪与轨迹预测算法，解决复杂场景下的目标丢失与轨迹漂移问题</li>
+                <li>完成系统集成，在 Jetson Nano 平台实现轻量化推理，推理速度提升 40%，满足平台端实时性要求</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">算法工程师（实习）</h3>
+              <div class="tl-org">环天智慧科技股份有限公司</div>
+            </div>
+            <span class="tl-date">2024.06 – 2025.02</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>承担天府星座（环天星座）光学与 SAR 卫星影像的 L1 / L2 级产品处理：L1 级辐射定标、传感器几何校正与分景整理，L2 级正射校正、大气校正、多光谱融合与镶嵌，输出空间基准统一的标准影像底图</li>
+              <li>负责光学与 SAR 的亚像元级配准：以点线特征协同配合控制点优化完成跨模态配准，并维护多时相、跨传感器影像的几何一致性</li>
+              <li>基于配准后的多源影像构建融合解译流程，在四川丘陵破碎田块场景实现地块级语义分割与作物种植面积提取</li>
+              <li>建立面向农业保险与地质灾害险理赔的量化评估链路：由解译结果输出地块边界、受损范围与面积统计，形成可复核的定损依据</li>
+              <li>承担样本构建、模型训练与精度评价（中误差与分类精度）；与空间智能感知及大模型应用联合实验室协同开展遥感关键技术研究，产出发明专利 2 项</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">算法工程师（实习）</h3>
+              <div class="tl-org">图灵人工智能研究院</div>
+            </div>
+            <span class="tl-date">2025.03 – 2025.08</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>负责工业检测系统的风格迁移与缺陷检测算法开发，通过扩充数据分布提升模型跨域泛化能力，实现端到端推理</li>
+              <li>设计 OCR 与大模型融合的识别方案，提升低质图像与复杂背景下的字符识别准确率</li>
+              <li>参与测试计划的制定与执行，负责结果分析与技术问题跟踪</li>
+            </ul>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ======================= 项目 ======================= -->
+  <section class="section section--alt" id="projects">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Projects</span>
+        <h2 class="section__title">项目经历</h2>
+      </div>
+
+      <div class="projects">
+        <article class="card card--wide reveal">
+          <div class="card__top">
+            <span class="tag">硕士学位论文 · 光学与 SAR 多源融合</span>
+            <span class="card__date">2023.09 – 2026.03</span>
+          </div>
+          <h3 class="card__title">光学—SAR 多源融合的水稻精细制图</h3>
+          <p class="card__desc">
+            以四川眉山天府新区为研究区，基于 Sentinel-1 SAR 与 Sentinel-2 光学数据构建“样本生成—融合识别”一体化流程。样本侧以 LSWI、CCVS、SDWI 等物候指标在移栽期粗定位潜在稻田，经多时相随机森林软投票与少量人工校验生成跨年度、空间均衡样本，OA 稳定在 91.0%–93.7%；识别侧提出多尺度非对称融合网络 MSAFNet，双分支非共享编码配合多尺度语义增强模块（MSEM）与类别平衡特征融合模块（CBFM），经 UPerNet 解码恢复精细边界，在破碎化丘陵稻区取得水稻 IoU 83.31%、OA 99.24%，较主流多模态方法提升 5–10%，输出 2019—2023 年 10 m 分辨率分布图，与统计面积线性拟合 R² = 0.972。
+          </p>
+          <div class="card__stack">
+            <span class="chip">Sentinel-1 / 2</span>
+            <span class="chip">Google Earth Engine</span>
+            <span class="chip">多模态融合</span>
+            <span class="chip">语义分割</span>
+            <span class="chip">物候特征</span>
+            <span class="chip">随机森林</span>
+            <span class="chip">UPerNet</span>
+          </div>
+          <div class="card__links">
+            <a href="#honors">论文与专利</a>
+            <a href="#contact">技术交流</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="tag">卫星遥感应用 · 已上线</span>
+            <span class="card__date">2024.06 – 2025.02</span>
+          </div>
+          <h3 class="card__title">星瞰河山：农田解译与理赔量化</h3>
+          <p class="card__desc">
+            面向省级高标准农田监管与保险定损的遥感应用。数据侧以天府星座光学与 SAR 影像完成 L1 / L2 级产品生产：辐射定标与系统几何校正、正射与大气校正、多光谱融合与镶嵌，并以点线特征协同的控制点方案实现跨模态亚像元配准，形成空间基准统一的标准底图；应用侧以光学与 SAR 联合观测替代单一数据源，解决多云雨地区光学影像缺失、地块边界被遮挡的问题，地块图斑化后输出作物类型、种植面积与长势等级，针对灾损场景比对灾前灾后影像量化受损范围与面积，形成可复核的理赔依据。
+          </p>
+          <div class="card__stack">
+            <span class="chip">光学—SAR 融合</span>
+            <span class="chip">地块提取</span>
+            <span class="chip">变化检测</span>
+            <span class="chip">灾害定损</span>
+            <span class="chip">精度评价</span>
+          </div>
+          <div class="card__links">
+            <a href="#experience">项目背景</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="tag">工业视觉 · 已上线</span>
+            <span class="card__date">2025.03 – 2025.08</span>
+          </div>
+          <h3 class="card__title">
+            <a href="https://tulegit.com/chat" target="_blank" rel="noopener">图灵鉴 X：工业缺陷检测与 OCR 识别</a>
+          </h3>
+          <p class="card__desc">
+            面向工业质检场景的落地产品。在目标域样本稀缺条件下，以风格迁移扩充数据分布，提升缺陷检测模型的泛化能力并实现端到端推理；设计 OCR 与大模型融合方案，改善复杂背景与低质图像下的字符识别效果。
+          </p>
+          <div class="card__stack">
+            <span class="chip">风格迁移</span>
+            <span class="chip">GAN</span>
+            <span class="chip">缺陷检测</span>
+            <span class="chip">OCR</span>
+            <span class="chip">大模型</span>
+          </div>
+          <div class="card__links">
+            <a href="https://tulegit.com/chat" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14.5V19a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19V6.5A1.5 1.5 0 0 1 5 5h4.5"/></svg>
+              在线体验
+            </a>
+            <a href="#experience">项目背景</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 教育 ======================= -->
+  <section class="section" id="education">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Education</span>
+        <h2 class="section__title">教育背景</h2>
+      </div>
+
+      <ol class="timeline reveal">
+        <li class="tl-item">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">南京航空航天大学</h3>
+              <div class="tl-org">光学工程 · 硕士（航天学院）</div>
+            </div>
+            <span class="tl-date">2023.09 – 2026.04</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>研究方向：光学与 SAR 卫星遥感图像处理、多源融合语义分割</li>
+              <li>学位论文：基于光学与 SAR 的样本自适应生成及水稻提取方法研究</li>
+              <li>授权专利 2 项、受理专利 6 项；SCI 二区论文 1 篇（Int. J. Digital Earth, IF 5.1）、EI 检索论文 2 篇</li>
+              <li>连续两年获一等奖学金（2024、2025）</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">长春理工大学</h3>
+              <div class="tl-org">光电信息科学与工程 · 学士</div>
+            </div>
+            <span class="tl-date">2019.09 – 2023.06</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>研究方向：激光仿真，发表 SPIE 会议论文 1 篇</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ======================= 技能 ======================= -->
+  <section class="section section--alt" id="skills">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Skills</span>
+        <h2 class="section__title">专业能力</h2>
+      </div>
+
+      <div class="skills reveal">
+        <div>
+          <p class="skill__label">遥感与融合</p>
+          <ul class="skill__list">
+            <li>L1 级辐射定标与几何校正</li>
+            <li>L2 级正射与大气校正</li>
+            <li>多光谱融合与影像镶嵌</li>
+            <li>光学—SAR 亚像元配准</li>
+            <li>云检测与云影剔除</li>
+            <li>多时相合成与去噪</li>
+            <li>辐射与地形校正</li>
+            <li>多源融合语义分割</li>
+            <li>物候特征与时序分析</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">数据与平台</p>
+          <ul class="skill__list">
+            <li>天府星座 / 环天星座影像</li>
+            <li>Sentinel-1 / Sentinel-2</li>
+            <li>L0—L2 产品分级与质检</li>
+            <li>Google Earth Engine</li>
+            <li>SRTM DEM 与辅助数据</li>
+            <li>样本自动生成与校验</li>
+            <li>制图产品精度评价</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">模型与框架</p>
+          <ul class="skill__list">
+            <li>CNN / Transformer</li>
+            <li>语义分割（UPerNet 解码）</li>
+            <li>多模态融合网络</li>
+            <li>GAN / 风格迁移</li>
+            <li>YOLO 系列</li>
+            <li>随机森林与集成学习</li>
+            <li>PyTorch / TensorFlow</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">边缘部署与工程</p>
+          <ul class="skill__list">
+            <li>昇腾 310B / Atlas DK2</li>
+            <li>Jetson 边缘部署</li>
+            <li>模型轻量化与推理加速</li>
+            <li>Python / C++</li>
+            <li>ROS 2</li>
+            <li>STM32 / ESP32 嵌入式联调</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">科研与工程化</p>
+          <ul class="skill__list">
+            <li>SCI 与 EI 论文写作</li>
+            <li>专利撰写</li>
+            <li>数据闭环与自动化测评</li>
+            <li>工具链与流水线设计</li>
+            <li>技术方案与汇报材料</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">语言</p>
+          <ul class="skill__list">
+            <li>中文（母语）</li>
+            <li>英文（书面 / 口头，可支持国际协作）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 开源 ======================= -->
+  <section class="section section--alt" id="opensource">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Open Source</span>
+        <h2 class="section__title">开源作品</h2>
+        <p class="section__desc">将可复用的遥感与工程方法整理为开源工具，源码与运行方式均可公开查阅。</p>
+      </div>
+
+      <div class="projects">
+        <article class="card card--wide reveal">
+          <div class="card__top">
+            <span class="tag">遥感仿真 · 开源</span>
+            <span class="card__date">2026</span>
+          </div>
+          <h3 class="card__title">
+            <a href="https://github.com/ccccty/RGB_SAR_LIDAR_SIMU" target="_blank" rel="noopener">RGB / SAR / LiDAR 多模态遥感仿真数据集生成器</a>
+          </h3>
+          <p class="card__desc">
+            面向遥感解译训练数据稀缺的多模态观测仿真器：给定三维模型与观测几何，离线生成可见光、红外（MWIR / LWIR）、毫米波雷达距离—多普勒、SAR 条带式（距离多普勒聚焦、相干斑与 NESZ）与激光雷达点云五类数据。所有模态共享同一三维世界与同一套天气状态，标注由三维包围盒统一投影导出，天然具备像素级跨模态配准，并可直接导出 YOLO 与 COCO 数据集。纯 Python 实现（numpy + Blender 无头渲染），不依赖 GPU 与网络，附参数化工作台与在线看板。
+          </p>
+          <div class="card__stack">
+            <span class="chip">SAR 条带仿真</span>
+            <span class="chip">跨模态配准</span>
+            <span class="chip">YOLO / COCO 导出</span>
+            <span class="chip">红外辐射模型</span>
+            <span class="chip">Blender</span>
+            <span class="chip">Python / numpy</span>
+          </div>
+          <div class="card__links">
+            <a href="https://github.com/ccccty/RGB_SAR_LIDAR_SIMU" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14.5V19a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19V6.5A1.5 1.5 0 0 1 5 5h4.5"/></svg>
+              查看仓库
+            </a>
+            <a href="https://ccccty.github.io/RGB_SAR_LIDAR_SIMU/" target="_blank" rel="noopener">在线看板</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="tag">工具包 · MIT</span>
+            <span class="card__date">2026</span>
+          </div>
+          <h3 class="card__title">
+            <a href="https://github.com/ccccty/proposal-generator-cn" target="_blank" rel="noopener">proposal-generator-cn：辅助科研申报书写作的技能包</a>
+          </h3>
+          <p class="card__desc">
+            辅助科研申报书写作的技能包，适用于国家级科研计划与各类科研项目的申报材料。正文采用无元信息的学术文体，技术指标附带基线论证，未确定事项统一剥离至随附清单。随包提供三项可执行工具，分别用于文体合规自检、Markdown 转 Word 与 Word 结构校验。
+          </p>
+          <div class="card__stack">
+            <span class="chip">文体合规自检</span>
+            <span class="chip">Markdown 转 Word</span>
+            <span class="chip">结构校验</span>
+          </div>
+          <div class="card__links">
+            <a href="https://github.com/ccccty/proposal-generator-cn" target="_blank" rel="noopener">查看仓库</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="tag">在线应用</span>
+            <span class="card__date">2026</span>
+          </div>
+          <h3 class="card__title">
+            <a href="https://ccccty.github.io/study/" target="_blank" rel="noopener">工程概念卡片站</a>
+          </h3>
+          <p class="card__desc">
+            将岗位需求中出现的高频工程概念组织为结构化卡片，按 SM-2 算法安排复习间隔，支持离线使用与进度持久化。站点以单文件实现，卡片数据由版本控制驱动更新。
+          </p>
+          <div class="card__stack">
+            <span class="chip">SM-2 间隔重复</span>
+            <span class="chip">离线可用</span>
+            <span class="chip">PWA</span>
+          </div>
+          <div class="card__links">
+            <a href="https://ccccty.github.io/study/" target="_blank" rel="noopener">在线使用</a>
+            <a href="https://github.com/ccccty/study" target="_blank" rel="noopener">查看仓库</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 荣誉 ======================= -->
+  <section class="section" id="honors">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Honors</span>
+        <h2 class="section__title">荣誉与科研成果</h2>
+      </div>
+
+      <ul class="honors reveal">
+        <li><span class="honors__year">2026</span><span class="honors__name">上海市质量协会质量技术奖（成果）三等奖<span class="chip" style="margin-left:8px">CIHF 2026</span></span></li>
+        <li><span class="honors__year">论文</span><span class="honors__name">SCI 二区 1 篇（Int. J. Digital Earth, IF 5.1）· EI 检索 2 篇 · SPIE 会议 1 篇</span></li>
+        <li><span class="honors__year">专利</span><span class="honors__name">已授权 2 项 · 已受理 6 项（含多模态遥感大模型、多尺度融合制图方向）</span></li>
+        <li><span class="honors__year">奖学金</span><span class="honors__name">硕士一等学业奖学金（2024、2025 连续两年）</span></li>
+      </ul>
+
+      <figure class="evidence reveal">
+        <a href="assets/img/award-2026.jpg" target="_blank" rel="noopener">
+          <img src="assets/img/award-2026.jpg" alt="2026 年上海市质量协会质量技术奖（成果）三等奖 颁奖现场" loading="lazy">
+        </a>
+        <figcaption class="evidence__cap">
+          <strong>2026 年上海市质量协会质量技术奖（成果）三等奖</strong>
+          于 CIHF 2026 中国工业论坛 · 质量创新论坛暨数字化技术研讨会现场领奖。
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================= 联系 ======================= -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="contact__title">联系方式</h2>
+      <p class="contact__desc">
+        常驻上海，关注卫星遥感图像处理、太空计算与星上实时解译方向的算法岗位。欢迎技术交流，邮件通常当天回复。
+      </p>
+
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="mailto:503575179@qq.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.6 6.6 8.4 6 8.4-6"/></svg>
+          503575179@qq.com
+        </a>
+        <a class="btn btn--ghost" href="tel:18837831302">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 3.5h2.2l1.6 4-2 1.3a11 11 0 0 0 5.8 5.8l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+          188 3783 1302
+        </a>
+        <a class="btn btn--ghost" href="assets/resume.pdf" target="_blank" rel="noopener">下载 PDF 简历</a>
+      </div>
+
+      <div class="footer">
+        <span>© <span id="year">2026</span> 崔天一</span>
+        <span>纯 HTML / CSS 构建 · 无框架依赖</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

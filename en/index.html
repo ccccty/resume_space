@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cui Tianyi · Algorithm Engineer | Satellite Remote Sensing Image Processing and On-Board Edge Computing</title>
+<meta name="description" content="Cui Tianyi, M.S. in Optical Engineering (NUAA). Algorithm engineer working on optical–SAR satellite image fusion and deployment on compute-constrained platforms: phenology-constrained adaptive sample generation and a multi-scale asymmetric fusion network, rice IoU 83.31%, five-year 10 m mapping.">
+<meta name="author" content="Cui Tianyi">
+<meta property="og:title" content="Cui Tianyi · Algorithm Engineer">
+<meta property="og:description" content="Satellite image processing · Optical–SAR fusion · On-board edge deployment">
+<meta property="og:type" content="profile">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/avatar-32.png">
+<link rel="apple-touch-icon" href="../assets/img/avatar-180.png">
+<link rel="stylesheet" href="../assets/css/style.css">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="index.html">Cui Tianyi</a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#opensource">Open Source</a></li>
+      <li><a href="#honors">Honors</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="nav__lang" href="../index.html" hreflang="zh-CN">中文</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div>
+        <p class="hero__eyebrow">Algorithm Engineer · Satellite Image Processing · Space Computing and On-Board Edge Deployment</p>
+        <h1 class="hero__name">Cui Tianyi<small>崔天一</small></h1>
+        <p class="hero__role">
+          M.S. in Optical Engineering, working on fusion of optical and SAR satellite imagery and on real-time inference over compute-constrained platforms. Built a phenology-constrained sample generator and a multi-scale asymmetric fusion network for fragmented hilly rice regions, reaching a rice IoU of <strong>83.31%</strong>. Currently an algorithm engineer at the Shanghai Academy of Spaceflight Technology, where I lead a multi-source fusion refactor that passed review by SASTIND and saved the client <strong>over ¥1 million</strong> on a single project.
+        </p>
+
+        <ul class="hero__meta">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.2-7-11a7 7 0 1 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Shanghai, China
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 10.5V20h14v-9.5"/><path d="M9.5 20v-5h5v5"/></svg>
+            Nanjing Univ. of Aeronautics &amp; Astronautics · M.S.
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/></svg>
+            25 · Male
+          </li>
+        </ul>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="../assets/resume.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M4.5 19.5h15"/></svg>
+            Download Resume
+          </a>
+          <a class="btn btn--ghost" href="mailto:503575179@qq.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.6 6.6 8.4 6 8.4-6"/></svg>
+            503575179@qq.com
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__avatar">
+        <img src="../assets/img/avatar.jpg" alt="Cui Tianyi" width="520" height="689">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="about">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">About</span>
+        <h2 class="section__title">About me</h2>
+      </div>
+
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            My research focuses on fusion of optical and SAR satellite imagery and on real-time inference over compute-constrained platforms in space computing scenarios. The regime differs from ground vision: acquisition is uncontrolled, with cloud, terrain shadow and speckle acting at once; labelled samples are scarce and extrapolate poorly; and on-board or in-orbit platforms are bounded in power, compute and downlink bandwidth. My approach is to split the interpretation chain into independently verifiable stages — modality harmonisation and registration, sample generation, fusion network, deployment optimisation — each closed by a measurable accuracy criterion.
+          </p>
+          <p>
+            My M.S. thesis takes Tianfu New Area, Meishan, Sichuan as the study region and uses Sentinel-1 SAR with Sentinel-2 optical data to propose a phenology-constrained adaptive rice sample generator and a multi-scale asymmetric fusion network (MSAFNet). It delivers five-year (2019–2023) rice maps at 10 m resolution with a rice IoU of 83.31% and an overall accuracy of 99.24%, and a linear fit of R² = 0.972 against official acreage statistics. The work is published in the International Journal of Digital Earth (SCI Q2, IF 5.1) and has produced two patent applications.
+          </p>
+          <p>
+            At Huantian Wisdom — the operator of the Tianfu (Huantian) constellation of joint optical and SAR remote sensing satellites — I worked on L1/L2 image product processing and multi-source fusion analysis, delivering farmland semantic segmentation, parcel-level crop extraction and quantitative assessment for geological and agricultural insurance claims. At SAST I now lead a multi-source fusion refactor bringing point cloud, infrared and visible-light data into a unified framework, and I am familiar with the full path from model training and migration onto domestic compute platforms through to post-launch quality maintenance.
+          </p>
+        </div>
+
+        <aside class="facts reveal">
+          <dl>
+            <div class="facts__row"><dt>Research focus</dt><dd>Remote sensing fusion</dd></div>
+            <div class="facts__row"><dt>Current role</dt><dd>Algorithm Engineer, 8th Academy of CASC</dd></div>
+            <div class="facts__row"><dt>Education</dt><dd>M.S. · Class of 2026</dd></div>
+            <div class="facts__row"><dt>Based in</dt><dd>Shanghai, China</dd></div>
+            <div class="facts__row"><dt>Publications</dt><dd>4 papers · 8 patents</dd></div>
+            <div class="facts__row"><dt>Languages</dt><dd>Chinese / English</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><span class="stat__num">83.31%</span><span class="stat__label">Rice parcel IoU</span></div>
+        <div class="stat"><span class="stat__num">10 m</span><span class="stat__label">Five-year map resolution</span></div>
+        <div class="stat"><span class="stat__num">¥1M+</span><span class="stat__label">Cost saved, single project</span></div>
+        <div class="stat"><span class="stat__num">8</span><span class="stat__label">Patents (2 granted / 6 pending)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Experience</span>
+        <h2 class="section__title">Experience</h2>
+        <p class="section__desc">From fusion-based interpretation of satellite imagery to unified processing of multi-sensor data and engineering delivery.</p>
+      </div>
+
+      <ol class="timeline reveal">
+        <li class="tl-item tl-item--now">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">Algorithm Engineer<span class="badge-now">Current</span></h3>
+              <div class="tl-org">Shanghai Academy of Spaceflight Technology (8th Academy of CASC)</div>
+            </div>
+            <span class="tl-date">Mar 2026 – Present</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>Led the multi-source fusion algorithm refactor, bringing point-cloud, infrared and visible-light data into a unified processing framework and replacing the previous cascaded pipeline</li>
+              <li>The approach passed review by SASTIND and saved the client over ¥1 million on a single project, with an official application certificate</li>
+              <li>Responsible for migrating the algorithms onto a domestic compute platform, real-time optimisation, effect validation and engineering delivery of the fusion chain</li>
+            </ul>
+          </div>
+
+          <div class="tl-sub">
+            <div class="tl-sub__head">
+              <span class="tl-sub__role">Lightweight Inference on Edge Platforms (Intern)</span>
+              <span class="tl-date">Sep 2023 – Dec 2023</span>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Designed object tracking and trajectory prediction algorithms with Transformer and LSTM, resolving target loss and trajectory drift in complex scenes</li>
+                <li>Integrated the system and implemented lightweight inference on Jetson Nano, achieving a 40% speedup to meet the real-time budget of the platform</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">Algorithm Engineer (Intern)</h3>
+              <div class="tl-org">Huantian Wisdom Technology Co., Ltd.</div>
+            </div>
+            <span class="tl-date">Jun 2024 – Feb 2025</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>Produced L1/L2 image products from Tianfu (Huantian) constellation optical and SAR acquisitions: L1 radiometric calibration, sensor geometric correction and scene cataloguing; L2 orthorectification, atmospheric correction, multi-spectral pan-sharpening and mosaicking, delivering a standard base imagery layer on a unified spatial reference</li>
+              <li>Owned sub-pixel registration between optical and SAR imagery using point-and-line feature matching with control-point optimisation, maintaining geometric consistency across time and sensors</li>
+              <li>Built a multi-source fusion interpretation pipeline on the registered imagery, delivering parcel-level semantic segmentation and crop area extraction in fragmented hilly terrain in Sichuan</li>
+              <li>Established a quantitative assessment chain for agricultural and geological-hazard insurance claims: parcel boundaries, damaged extent and area statistics derived from interpretation results as auditable loss-adjustment evidence</li>
+              <li>Responsible for sample construction, model training and accuracy assessment (RMSE and classification accuracy); worked with the Joint Laboratory for Spatial Intelligent Perception and Foundation Models, producing two patent applications</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">Algorithm Engineer (Intern)</h3>
+              <div class="tl-org">Turing Artificial Intelligence Research Institute</div>
+            </div>
+            <span class="tl-date">Mar 2025 – Aug 2025</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>Developed style-transfer and defect-detection algorithms for an industrial inspection system, expanding the data distribution to improve cross-domain generalisation and delivering end-to-end inference</li>
+              <li>Designed an OCR and large-model fusion approach that improved character recognition accuracy on low-quality images and in cluttered backgrounds</li>
+              <li>Contributed to test planning and execution, with responsibility for result analysis and issue tracking</li>
+            </ul>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="projects">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Projects</span>
+        <h2 class="section__title">Projects</h2>
+      </div>
+
+      <div class="projects">
+        <article class="card card--wide reveal">
+          <div class="card__top">
+            <span class="tag">M.S. Thesis · Optical–SAR Fusion</span>
+            <span class="card__date">Sep 2023 – Mar 2026</span>
+          </div>
+          <h3 class="card__title">Fine-Scale Rice Mapping by Optical–SAR Fusion</h3>
+          <p class="card__desc">
+            A “sample generation, fusion recognition” pipeline for Tianfu New Area, Meishan, Sichuan, built on Sentinel-1 SAR and Sentinel-2 optical data. On the sample side, LSWI, CCVS and SDWI phenological indices coarsely locate candidate paddies during transplanting, then multi-temporal random-forest soft voting with limited manual verification yields cross-year, spatially balanced training samples at a stable OA of 91.0–93.7%. On the recognition side, the multi-scale asymmetric fusion network MSAFNet pairs a dual-branch non-shared encoder with a multi-scale semantic enhancement module (MSEM) and a class-balanced feature fusion module (CBFM), decoded by UPerNet to recover fine boundaries, reaching a rice IoU of 83.31% and OA of 99.24% — 5–10 points above mainstream multimodal baselines — and producing 2019–2023 maps at 10 m resolution with R² = 0.972 against official acreage.
+          </p>
+          <div class="card__stack">
+            <span class="chip">Sentinel-1 / 2</span>
+            <span class="chip">Google Earth Engine</span>
+            <span class="chip">Multimodal fusion</span>
+            <span class="chip">Semantic segmentation</span>
+            <span class="chip">Phenology</span>
+            <span class="chip">Random forest</span>
+            <span class="chip">UPerNet</span>
+          </div>
+          <div class="card__links">
+            <a href="#honors">Publications and patents</a>
+            <a href="#contact">Get in touch</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="tag">Satellite Application · Live</span>
+            <span class="card__date">Jun 2024 – Feb 2025</span>
+          </div>
+          <h3 class="card__title">Xingkan Heshan: Farmland Interpretation and Claim Quantification</h3>
+          <p class="card__desc">
+            A remote sensing application for provincial high-standard farmland supervision and insurance loss assessment. On the data side, L1/L2 products are generated from Tianfu constellation optical and SAR imagery — radiometric calibration and system geometric correction, orthorectification and atmospheric correction, multi-spectral pan-sharpening and mosaicking — with sub-pixel cross-modal registration driven by point-and-line features and control points, yielding a base layer on a unified spatial reference. On the application side, joint optical and SAR observation replaces single-source data, covering optical gaps in cloudy regions and parcel boundaries obscured by cloud. Parcels are vectorised into a common map on which crop type, planted area and growth grade are reported; for damage events, pre- and post-event imagery are compared to quantify the affected extent and area as auditable claim evidence.
+          </p>
+          <div class="card__stack">
+            <span class="chip">Optical–SAR fusion</span>
+            <span class="chip">Parcel extraction</span>
+            <span class="chip">Change detection</span>
+            <span class="chip">Loss assessment</span>
+            <span class="chip">Accuracy assessment</span>
+          </div>
+          <div class="card__links">
+            <a href="#experience">Context</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="tag">Industrial Vision · Live</span>
+            <span class="card__date">Mar 2025 – Aug 2025</span>
+          </div>
+          <h3 class="card__title">
+            <a href="https://tulegit.com/chat" target="_blank" rel="noopener">Turing Jian X: Industrial Defect Detection &amp; OCR</a>
+          </h3>
+          <p class="card__desc">
+            A deployed product for industrial quality inspection. With scarce samples in the target domain, style transfer was used to expand the data distribution and improve the generalisation of the defect-detection model, enabling end-to-end inference. An OCR and large-model solution improved character recognition on low-quality images and in cluttered backgrounds.
+          </p>
+          <div class="card__stack">
+            <span class="chip">Style transfer</span>
+            <span class="chip">GAN</span>
+            <span class="chip">Defect detection</span>
+            <span class="chip">OCR</span>
+            <span class="chip">LLM</span>
+          </div>
+          <div class="card__links">
+            <a href="https://tulegit.com/chat" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14.5V19a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19V6.5A1.5 1.5 0 0 1 5 5h4.5"/></svg>
+              Live demo
+            </a>
+            <a href="#experience">Context</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Education</span>
+        <h2 class="section__title">Education</h2>
+      </div>
+
+      <ol class="timeline reveal">
+        <li class="tl-item">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">Nanjing University of Aeronautics and Astronautics</h3>
+              <div class="tl-org">M.S. in Optical Engineering (College of Astronautics)</div>
+            </div>
+            <span class="tl-date">Sep 2023 – Apr 2026</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>Research: optical and SAR satellite image processing, multimodal fusion and semantic segmentation</li>
+              <li>Thesis: sample-adaptive generation and rice extraction based on optical and SAR data</li>
+              <li>2 granted and 6 pending patents; one SCI Q2 paper (Int. J. Digital Earth, IF 5.1) and two EI-indexed papers</li>
+              <li>First-Class Scholarship in 2024 and 2025</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-head">
+            <div>
+              <h3 class="tl-title">Changchun University of Science and Technology</h3>
+              <div class="tl-org">B.Eng. in Optoelectronic Information Science and Engineering</div>
+            </div>
+            <span class="tl-date">Sep 2019 – Jun 2023</span>
+          </div>
+          <div class="tl-body">
+            <ul>
+              <li>Research: laser simulation; one SPIE conference paper</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="skills">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Skills</span>
+        <h2 class="section__title">Technical skills</h2>
+      </div>
+
+      <div class="skills reveal">
+        <div>
+          <p class="skill__label">Remote Sensing &amp; Fusion</p>
+          <ul class="skill__list">
+            <li>L1 radiometric and geometric correction</li>
+            <li>L2 orthorectification and atmospheric correction</li>
+            <li>Pan-sharpening and mosaicking</li>
+            <li>Sub-pixel optical–SAR registration</li>
+            <li>Cloud and cloud-shadow removal</li>
+            <li>Multi-temporal compositing and denoising</li>
+            <li>Radiometric and terrain correction</li>
+            <li>Multimodal semantic segmentation</li>
+            <li>Phenological time-series analysis</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">Data &amp; Platforms</p>
+          <ul class="skill__list">
+            <li>Tianfu / Huantian constellation imagery</li>
+            <li>Sentinel-1 / Sentinel-2</li>
+            <li>L0–L2 product levels and QC</li>
+            <li>Google Earth Engine</li>
+            <li>SRTM DEM and ancillary data</li>
+            <li>Automated sample generation</li>
+            <li>Map product accuracy assessment</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">Models &amp; Frameworks</p>
+          <ul class="skill__list">
+            <li>CNN / Transformer</li>
+            <li>Semantic segmentation (UPerNet)</li>
+            <li>Multimodal fusion networks</li>
+            <li>GAN / style transfer</li>
+            <li>YOLO family</li>
+            <li>Random forest and ensembles</li>
+            <li>PyTorch / TensorFlow</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">Edge Deployment</p>
+          <ul class="skill__list">
+            <li>Ascend 310B / Atlas DK2</li>
+            <li>Jetson edge deployment</li>
+            <li>Model compression and inference speedup</li>
+            <li>Python / C++</li>
+            <li>ROS 2</li>
+            <li>STM32 / ESP32 bring-up</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">Research &amp; Engineering</p>
+          <ul class="skill__list">
+            <li>SCI and EI paper writing</li>
+            <li>Patent drafting</li>
+            <li>Data loops and automated evaluation</li>
+            <li>Toolkit and pipeline design</li>
+            <li>Technical proposals and reviews</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="skill__label">Languages</p>
+          <ul class="skill__list">
+            <li>Chinese (native)</li>
+            <li>English (written &amp; spoken, comfortable in international teams)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="opensource">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Open Source</span>
+        <h2 class="section__title">Open source</h2>
+        <p class="section__desc">Reusable remote sensing and engineering methods released as open-source tooling.</p>
+      </div>
+
+      <div class="projects">
+        <article class="card card--wide reveal">
+          <div class="card__top">
+            <span class="tag">Remote Sensing Simulation · Open Source</span>
+            <span class="card__date">2026</span>
+          </div>
+          <h3 class="card__title">
+            <a href="https://github.com/ccccty/RGB_SAR_LIDAR_SIMU" target="_blank" rel="noopener">RGB / SAR / LiDAR Multimodal Remote Sensing Dataset Simulator</a>
+          </h3>
+          <p class="card__desc">
+            A multimodal sensing simulator addressing the scarcity of labelled remote sensing training data. Given a 3D model and an observation geometry, it generates visible, infrared (MWIR / LWIR), millimetre-wave radar range–Doppler, stripmap SAR (range–Doppler focusing, speckle and NESZ) and LiDAR point-cloud data offline. All modalities share one 3D world and one weather state, labels are projected from a single set of 3D boxes, so cross-modal pixel-level registration is inherent and datasets export directly to YOLO and COCO. Pure Python (numpy plus headless Blender), no GPU and no network required, with a parameterised studio and an online dashboard.
+          </p>
+          <div class="card__stack">
+            <span class="chip">Stripmap SAR simulation</span>
+            <span class="chip">Cross-modal registration</span>
+            <span class="chip">YOLO / COCO export</span>
+            <span class="chip">Infrared radiometry</span>
+            <span class="chip">Blender</span>
+            <span class="chip">Python / numpy</span>
+          </div>
+          <div class="card__links">
+            <a href="https://github.com/ccccty/RGB_SAR_LIDAR_SIMU" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14.5V19a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19V6.5A1.5 1.5 0 0 1 5 5h4.5"/></svg>
+              View repository
+            </a>
+            <a href="https://ccccty.github.io/RGB_SAR_LIDAR_SIMU/" target="_blank" rel="noopener">Online dashboard</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="tag">Toolkit · MIT</span>
+            <span class="card__date">2026</span>
+          </div>
+          <h3 class="card__title">
+            <a href="https://github.com/ccccty/proposal-generator-cn" target="_blank" rel="noopener">proposal-generator-cn: research-proposal writing skill package</a>
+          </h3>
+          <p class="card__desc">
+            A skill package that assists in writing research proposals, applicable to national research programmes and general research project applications. The body text follows an academic register without meta-commentary, technical metrics carry their own baseline arguments, and unresolved items are separated into an attached checklist. Three executable tools are included for style compliance checking, Markdown to Word conversion, and Word structure verification.
+          </p>
+          <div class="card__stack">
+            <span class="chip">Compliance checking</span>
+            <span class="chip">Markdown to Word</span>
+            <span class="chip">Structure verification</span>
+          </div>
+          <div class="card__links">
+            <a href="https://github.com/ccccty/proposal-generator-cn" target="_blank" rel="noopener">View repository</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="tag">Web app</span>
+            <span class="card__date">2026</span>
+          </div>
+          <h3 class="card__title">
+            <a href="https://ccccty.github.io/study/" target="_blank" rel="noopener">Engineering concept card library</a>
+          </h3>
+          <p class="card__desc">
+            Organises high-frequency engineering concepts drawn from job requirements into structured cards, scheduling review intervals with the SM-2 algorithm and supporting offline use with persistent progress. The site is implemented as a single file, with card data updated through version control.
+          </p>
+          <div class="card__stack">
+            <span class="chip">SM-2 spaced repetition</span>
+            <span class="chip">Offline capable</span>
+            <span class="chip">PWA</span>
+          </div>
+          <div class="card__links">
+            <a href="https://ccccty.github.io/study/" target="_blank" rel="noopener">Open the app</a>
+            <a href="https://github.com/ccccty/study" target="_blank" rel="noopener">View repository</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="honors">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__kicker">Honors</span>
+        <h2 class="section__title">Honors &amp; research output</h2>
+      </div>
+
+      <ul class="honors reveal">
+        <li><span class="honors__year">2026</span><span class="honors__name">Shanghai Association for Quality, Quality Technology Award (Achievement), Third Prize<span class="chip" style="margin-left:8px">CIHF 2026</span></span></li>
+        <li><span class="honors__year">Papers</span><span class="honors__name">1 SCI Q2 (Int. J. Digital Earth, IF 5.1) · 2 EI-indexed · 1 SPIE conference</span></li>
+        <li><span class="honors__year">Patents</span><span class="honors__name">2 granted · 6 pending (including multimodal remote sensing foundation models and multi-scale fusion mapping)</span></li>
+        <li><span class="honors__year">Scholarship</span><span class="honors__name">First-Class Academic Scholarship, 2024 and 2025</span></li>
+      </ul>
+
+      <figure class="evidence reveal">
+        <a href="../assets/img/award-2026.jpg" target="_blank" rel="noopener">
+          <img src="../assets/img/award-2026.jpg" alt="Award ceremony, 2026 Shanghai Association for Quality Quality Technology Award" loading="lazy">
+        </a>
+        <figcaption class="evidence__cap">
+          <strong>2026 Shanghai Association for Quality, Quality Technology Award (Achievement), Third Prize</strong>
+          Presented at CIHF 2026 · Quality Innovation Forum &amp; Digital Technology Symposium.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="contact__title">Contact</h2>
+      <p class="contact__desc">
+        Based in Shanghai, with an interest in algorithm roles in satellite image processing, space computing and on-board real-time interpretation. Open to technical discussion; email is usually answered the same day.
+      </p>
+
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="mailto:503575179@qq.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.6 6.6 8.4 6 8.4-6"/></svg>
+          503575179@qq.com
+        </a>
+        <a class="btn btn--ghost" href="tel:+8618837831302">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 3.5h2.2l1.6 4-2 1.3a11 11 0 0 0 5.8 5.8l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+          +86 188 3783 1302
+        </a>
+        <a class="btn btn--ghost" href="../assets/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+
+      <div class="footer">
+        <span>© <span id="year">2026</span> Cui Tianyi</span>
+        <span>Hand-written HTML / CSS · No framework</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
