@@ -168,7 +168,8 @@
 
     var sel = document.getElementById("variantSelect");
     if (sel) {
-      if (!sel.options.length) {
+      if (sel.options.length !== D.order.length) {
+        sel.innerHTML = "";
         D.order.forEach(function (k) {
           var o = document.createElement("option");
           o.value = k;
